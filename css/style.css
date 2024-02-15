@@ -12,12 +12,12 @@ body{
 
 
 .overview{
-  background-attachment: fixed; /* Parallax effect */     
-  background-position: center;  /* Parallax effect */
-  background-repeat: no-repeat; /* Parallax effect */
-  background-size: cover;       /* Parallax effect */
+  background-attachment: fixed; 
+  background-position: center;  
+  background-repeat: no-repeat; 
+  background-size: cover;
   color: white;
-  height: 400px;                /* Parallax effect */
+  height: 400px;               
 }
 
 
@@ -143,7 +143,11 @@ li:hover {
 first div in the grid  and place it in the grid. */
 .container div:first-child{
   grid-column: 1/-1;
-  background-image: url('/images/header.jpg');
+  background-image: url('../images/header.jpg');
+  background-attachment: fixed; /* Parallax effect */     
+  background-position: center;  /* Parallax effect */
+  background-repeat: no-repeat; /* Parallax effect */
+  background-size: cover;       /* Parallax effect */
 }
 
 
@@ -157,19 +161,19 @@ first div in the grid  and place it in the grid. */
 }
 
 .about{
-  grid-row: 2; 
+  grid-row-start: 2; 
 }
 
 .method{
-  grid-row: 3;
+  grid-row-start: 3;
 }
 
 .clients{
-  grid-row: 4;
+  grid-row-start: 4;
 }
 
 .contact{
-  grid-row: 5;
+  grid-row-start: 5;
 }
 
 .about-image, .method-image, .clients-image, .contact-image{
@@ -179,19 +183,19 @@ first div in the grid  and place it in the grid. */
 }
 
 .about-image{
-  grid-row: 2; 
+  grid-row-start: 2; 
 }
 
 .method-image{
-  grid-row: 3;
+  grid-row-start: 3;
 }
 
 .clients-image{
-  grid-row: 4;
+  grid-row-start: 4;
 }
 
 .contact-image{
-  grid-row: 5;
+  grid-row-start: 5;
 }
 
 
@@ -221,11 +225,11 @@ first div in the grid  and place it in the grid. */
 
 
   /* Steps 11 and 12: Update the grid-column property of the grid's children (where-needed)*/
-  .about .clients .method-image .contact-image{
+  .about, .clients, .method-image, .contact-image{
     grid-column: 3/span 2;
   }
 
-  .method .contact .about-image .clients-image{
+  .method, .contact, .about-image, .clients-image{
     grid-column: 2/span 2;
   }
 
